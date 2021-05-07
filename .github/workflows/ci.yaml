@@ -4,7 +4,7 @@ on:
     branches:
       - docker
 jobs:
-  DockerFile: 
+  Dockerfile: 
     runs-on: ubuntu-18.04
     steps:
       -
