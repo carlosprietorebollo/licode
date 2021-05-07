@@ -1,5 +1,7 @@
 # Licode
 
+[![ci](https://github.com/carlosprietorebollo/licode/actions/workflows/ci.yaml/badge.svg?branch=docker)](https://github.com/carlosprietorebollo/licode/actions/workflows/ci.yaml)
+
 An Open Source WebRTC Communications Platform.
 
 With Licode you can host your own WebRTC conference provider and build applications on top of it with easy to use APIs: [client-side](http://licode.readthedocs.io/en/master/client_api/) and [server-side](http://licode.readthedocs.io/en/master/server_api/).
