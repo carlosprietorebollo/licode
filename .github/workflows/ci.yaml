@@ -1,0 +1,23 @@
+name: ci
+on: 
+  push:
+    branches:
+      - docker
+jobs:
+  DockerFile: 
+    runs-on: ubuntu-18.04
+    steps:
+      -
+        name: checkout
+        uses: actions/checkout@v2
+      -
+        name: test
+        run: |
+          set -x
+          docker build -t licode-image .
+          export PUBLIC_IP=$( ip r | grep default | awk '{ print $9 }' )
+          echo $PUBLIC_IP
+          export MIN_PORT=30000; 
+          export MAX_PORT=30050; 
+          docker run --name licode -p  3000:3000 -p $MIN_PORT-$MAX_PORT:$MIN_PORT-$MAX_PORT/udp -p 3001:3001  -p 8080:8080 -e "MIN_PORT=$MIN_PORT" -e "MAX_PORT=$MAX_PORT" -e "PUBLIC_IP=$PUBLIC_IP" licode-image
+          
