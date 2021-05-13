@@ -24,6 +24,6 @@ spec:
             -
               name: PUBLIC_IP
               value: licode
-          image: carlosprietorebollo/licode:latest
+          image: lynckia/licode:latest
           name: licode-container
           
