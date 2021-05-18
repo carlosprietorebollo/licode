@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.04 as builder
 
 MAINTAINER Lynckia
 
@@ -45,3 +45,9 @@ RUN cat RELEASE
 WORKDIR /opt
 
 ENTRYPOINT ["./licode/extras/docker/initDockerLicode.sh"]
+
+FROM nginx
+
+COPY --from=builder licode/extras/basic_example/public/*  /usr/share/nginx/html/
+
+EXPOSE 80
