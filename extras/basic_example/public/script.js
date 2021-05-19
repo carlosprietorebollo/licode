@@ -91,7 +91,7 @@ const startBasicExample = () => {
   document.getElementById('startButton').disabled = true;
   document.getElementById('slideShowMode').disabled = false;
   document.getElementById('startWarning').hidden = true;
-  document.getElementById('startButton').hidden = true;
+  document.getElementById('startButton').hidden = false;
   recording = false;
   console.log('Selected Room', configFlags.room, 'of type', configFlags.type);
   const config = { audio: true,
