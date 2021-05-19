@@ -46,8 +46,4 @@ WORKDIR /opt
 
 ENTRYPOINT ["./licode/extras/docker/initDockerLicode.sh"]
 
-FROM nginx
 
-COPY --from=builder licode/extras/basic_example/public/*  /usr/share/nginx/html/
-
-EXPOSE 80
