@@ -88,7 +88,7 @@ function toggleSlideShowMode() {
 }
 
 const startBasicExample = () => {
-  document.getElementById('startButton').disabled = true;
+  document.getElementById('startButton').disabled = false;
   document.getElementById('slideShowMode').disabled = false;
   document.getElementById('startWarning').hidden = true;
   document.getElementById('startButton').hidden = false;
