@@ -15,8 +15,8 @@ parse_arguments(){
     MONGODB=true
     RABBITMQ=true
     NUVE=true
-    ERIZOCONTROLLER=true
-    ERIZOAGENT=true
+    ERIZOCONTROLLER=false
+    ERIZOAGENT=false
     BASICEXAMPLE=true
     ERIZODEBUG=false
 
