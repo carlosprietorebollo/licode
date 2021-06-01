@@ -12,12 +12,12 @@ echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BUILD_DIR/libdeps/build/lib" >> ~
 parse_arguments(){
   if [ -z "$1" ]; then
     echo "No parameters -- starting everything"
-    MONGODB=true
+    MONGODB=false
     RABBITMQ=true
-    NUVE=true
+    NUVE=false
     ERIZOCONTROLLER=true
     ERIZOAGENT=true
-    BASICEXAMPLE=true
+    BASICEXAMPLE=false
     ERIZODEBUG=false
 
   else
