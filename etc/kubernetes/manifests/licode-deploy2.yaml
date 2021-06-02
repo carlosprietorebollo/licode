@@ -1,1 +1,31 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: licode-deploy
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app: licode-label
+  template:
+    metadata: 
+      labels:
+        app: licode-label
+    spec:
+      containers:
+        -
+          env:
+            -
+              name: MIN_PORT
+              value: '30000'
+            -
+              name: MAX_PORT
+              value: '30050'
+            -
+              name: PUBLIC_IP
+              value: licode
+          image: carlosprietorebollo/licode:latest
+          name: licode-container-basicnuve
+        -
+          image: carlosprietorebollo/licode:2.1
+          name: licode-container-erizo       
